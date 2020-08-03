@@ -2,7 +2,7 @@
   "name": "melvinoostendorp",
   "private": true,
   "description": "The portfolio website for melvinoostendorp.nl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Melvin Oostendorp <info@arbarwings.nl>",
   "license": "MIT",
   "scripts": {
