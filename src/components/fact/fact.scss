@@ -1,0 +1,25 @@
+@import 'common/sass/_all';
+
+.fact-item {
+  svg {
+    float: left;
+    margin-top: 7px;
+    path {
+      fill: $icon-gray !important;
+    }
+  }
+
+  .fact-item-details {
+    margin-left: 60px;
+
+    h3 {
+      color: $title-color;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    span {
+      font-size: 1.05rem;
+    }
+  }
+}

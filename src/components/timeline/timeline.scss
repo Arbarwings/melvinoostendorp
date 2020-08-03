@@ -1,0 +1,14 @@
+@import 'common/sass/_all';
+
+.timeline {
+  position: relative;
+
+  .timeline-line {
+    background-color: $primary;
+    bottom: 30px;
+    left: 34px;
+    position: absolute;
+    top: 30px;
+    width: 1px;
+  }
+}

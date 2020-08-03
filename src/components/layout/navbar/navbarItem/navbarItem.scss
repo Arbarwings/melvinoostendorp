@@ -1,0 +1,37 @@
+@import 'common/sass/_all';
+
+.navbar .navbar-item {
+  border-bottom: 1px solid $secondary;
+  color: $white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+
+  &::before {
+    background: $yellow;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: auto;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    width: 0;
+    z-index: 1;
+  }
+
+  &.is-active,
+  &:hover {
+    background-color: unset;
+    color: $yellow;
+
+    &::before {
+      left: 0;
+      width: 100%;
+    }
+  }
+}

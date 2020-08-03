@@ -1,0 +1,135 @@
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Bulma import
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Bulma import
+========================================================================== */
+
+@import 'common/sass/_all';
+
+@import '~bulma/sass/base/minireset';
+@import '~bulma/sass/base/generic';
+
+@import '~bulma/sass/helpers/all';
+
+body {
+  background-color: $default-background-color;
+  color: $default-text-color;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $scrollbar-background;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $scrollbar;
+  border-radius: 10px;
+}
+
+// Need to finish this
+
+// Social links
+ul.social-links {
+  list-style: none;
+  margin: 1.5rem 0;
+
+  li {
+    display: inline;
+
+    a {
+      color: $white;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  li:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+
+// Mouse icon
+@keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
+.mouse-wrapper {
+  padding-bottom: 40px;
+
+  .mouse-icon {
+    border: solid 2px $white;
+    border-radius: 16px;
+    display: block;
+    height: 26px;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+    width: 20px;
+
+    .wheel {
+      animation: ani-mouse 2s linear infinite;
+      background: $white;
+      border-radius: 100%;
+      display: block;
+      height: 4px;
+      left: 50%;
+      position: absolute;
+      top: 8px;
+      transform: translateX(-50%);
+      width: 4px;
+    }
+  }
+}
+
+.skills {
+  text-align: center;
+
+  img {
+    max-height: 100px;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.contact-item a {
+  align-items: center;
+  color: $default-text-color;
+  display: inline-flex;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  &:hover {
+    color: $primary;
+  }
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}

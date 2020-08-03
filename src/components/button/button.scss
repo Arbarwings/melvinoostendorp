@@ -1,0 +1,19 @@
+@import 'common/sass/_all';
+
+@import '~bulma/sass/elements/button';
+
+.button.is-primary {
+  border-width: 2px;
+  font-weight: bold;
+  height: 2.6em;
+  padding-left: calc(1em + 1em);
+  padding-right: calc(1em + 1em);
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $primary;
+    color: $primary;
+    transform: scale(1.1);
+  }
+}

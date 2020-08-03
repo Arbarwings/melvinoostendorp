@@ -1,0 +1,55 @@
+@import 'common/sass/_all';
+
+.timeline .timeline-item {
+  margin-bottom: 50px;
+  padding-left: 50px;
+  position: relative;
+  width: 100%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:not(:first-child) .timeline-icon {
+    margin-top: -5px;
+    padding-top: 5px;
+  }
+
+  .timeline-icon {
+    background-color: $white;
+    left: -7px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+    svg path {
+      fill: $primary !important;
+    }
+  }
+
+  .timeline-content {
+    position: relative;
+
+    .timeline-content-time {
+      display: block;
+      font-size: 14px;
+    }
+
+    .timeline-content-title {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 10px 0;
+      white-space: pre-wrap;
+
+      &:nth-child(3) {
+        margin-top: -10px;
+      }
+    }
+
+    p {
+      margin: 0;
+      white-space: pre-wrap;
+    }
+  }
+}

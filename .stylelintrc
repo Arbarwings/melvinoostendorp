@@ -1,0 +1,20 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "plugins": ["stylelint-scss", "stylelint-declaration-use-variable", "stylelint-prettier", "stylelint-order"],
+  "rules": {
+    "prettier/prettier": [true, {"severity": "warning"}],
+    "no-descending-specificity": null,
+    "selector-pseudo-class-no-unknown": [true, {"ignorePseudoClasses": ["global"]}],
+    "block-no-empty": [true, {"severity": "warning"}],
+    "selector-max-attribute": 0,
+    "color-named": "never",
+    "color-no-hex": null,
+    "sh-waqar/declaration-use-variable": [["color", {"ignoreValues": ["inherit", "transparent"]}]],
+    "declaration-block-trailing-semicolon": "always",
+    "order/order": [
+			"custom-properties",
+			"declarations"
+		],
+		"order/properties-alphabetical-order": true
+  }
+}

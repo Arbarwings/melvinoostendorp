@@ -1,0 +1,9 @@
+@import 'common/sass/_all';
+
+@import '~bulma/sass/layout/hero';
+
+.hero.is-secondary {
+  background-color: $secondary;
+  color: $white;
+  position: relative;
+}

@@ -1,0 +1,9 @@
+@import 'common/sass/_all';
+
+@import '~bulma/sass/layout/footer';
+
+.footer {
+  background-color: $secondary;
+  color: $footer-text-color;
+  padding: 40px 10px;
+}

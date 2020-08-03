@@ -1,0 +1,9 @@
+@import 'common/sass/_all';
+
+@import '~bulma/sass/grid/columns';
+
+.columns .column.is-centered {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}

@@ -1,0 +1,7 @@
+@import 'common/sass/_all';
+
+@import '~bulma/sass/layout/section';
+
+.section:last-child {
+  margin-bottom: 1rem;
+}

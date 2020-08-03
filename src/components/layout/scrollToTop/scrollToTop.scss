@@ -1,0 +1,30 @@
+@import 'common/sass/_all';
+
+.scroll-to-top {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  bottom: 25px;
+  cursor: pointer;
+  display: none;
+  height: 40px;
+  position: fixed;
+  right: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  width: 40px;
+  z-index: 4;
+
+  &:hover {
+    background-color: $primary;
+  }
+
+  &.is-active {
+    display: flex;
+  }
+
+  svg {
+    color: $white;
+    margin: auto;
+  }
+}
