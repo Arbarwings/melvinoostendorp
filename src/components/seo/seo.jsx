@@ -39,6 +39,7 @@ const SEO = ({ title = defaultTitle, description = defaultDescription, location 
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:image" content={logo} />
       {/* <meta property="og:image" content={Thumbnail} /> */}
       <script type="application/ld+json">{structuredDataOrganization}</script>
       <title>{title}</title>
