@@ -110,7 +110,7 @@ const IndexPage = () => (
         </Columns>
         <Columns className="mt-1">
           <Columns.Column centered>
-            <Fact icon={mdiLaptop} total={42} description="Projects completed" />
+            <Fact icon={mdiLaptop} total={51} description="Projects completed" />
           </Columns.Column>
           <Columns.Column centered>
             <Fact
@@ -120,7 +120,7 @@ const IndexPage = () => (
             />
           </Columns.Column>
           <Columns.Column centered>
-            <Fact icon={mdiMusicNote} total={3094} description="Hours listened to music" />
+            <Fact icon={mdiMusicNote} total={3741} description="Hours listened to music" />
           </Columns.Column>
           <Columns.Column centered>
             <Fact icon={mdiEarth} total={7} description="Countries visited" />
@@ -182,6 +182,7 @@ const IndexPage = () => (
               <Timeline.Item
                 type={Timeline.Item.TYPE.EDUCATION}
                 startYear={2019}
+                endYear={2021}
                 title="Bachelor's Degree"
                 secondTitle="Information Technology"
               >
@@ -211,8 +212,8 @@ const IndexPage = () => (
             <Timeline>
               <Timeline.Item
                 type={Timeline.Item.TYPE.WORK}
-                startYear="Feb 2020"
-                title="Software and Web Developer at Praegus"
+                startYear="Feb 2021"
+                title="Full-Stack Developer at Orangebeard"
               />
               <Timeline.Item
                 type={Timeline.Item.TYPE.WORK}
@@ -222,6 +223,12 @@ const IndexPage = () => (
                 I started my own company in 2012 when I was 15 years old. My main activities are
                 creating and maintaining websites for all kinds of companies.
               </Timeline.Item>
+              <Timeline.Item
+                type={Timeline.Item.TYPE.WORK}
+                startYear="Feb 2020"
+                endYear="Jan 2021"
+                title="Full-Stack Developer at Praegus"
+              />
               <Timeline.Item
                 type={Timeline.Item.TYPE.WORK}
                 startYear="Sep 2019"

@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  extends: ['airbnb', 'plugin:prettier/recommended', 'prettier/react'],
-  plugins: ['react', 'jsx-a11y', 'prettier'],
+  extends: ['airbnb', 'plugin:prettier/recommended', 'prettier'],
+  plugins: ['@babel', 'react', 'jsx-a11y', 'prettier'],
   settings: {
     react: {
       version: 'detect',
@@ -64,9 +64,10 @@ module.exports = {
     'prefer-object-spread': 0,
     'no-throw-literal': 0,
   },
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaFeatures: {
+      jsx: true,
       legacyDecorators: true,
     },
   },
