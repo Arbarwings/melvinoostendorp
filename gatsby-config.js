@@ -40,7 +40,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
-        icon: './src/assets/images/favicon-512.png',
+        icon: 'src/assets/images/favicon-512.png',
       },
     },
     {
@@ -51,24 +51,6 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-favicon',
-    //   options: {
-    //     logo: './src/assets/images/favicon-512.png', // The recommended size for the file is: 1500x1500px.
-    //     injectHTML: true,
-    //     icons: {
-    //       android: true,
-    //       appleIcon: true,
-    //       appleStartup: true,
-    //       coast: false,
-    //       favicons: true,
-    //       firefox: true,
-    //       twitter: false,
-    //       yandex: false,
-    //       windows: false,
-    //     },
-    //   },
-    // },
     {
       resolve: 'gatsby-plugin-offline',
       options: {},

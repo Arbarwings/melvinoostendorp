@@ -213,7 +213,7 @@ const IndexPage = () => (
               <Timeline.Item
                 type={Timeline.Item.TYPE.WORK}
                 startYear="Feb 2021"
-                title="Full-Stack Developer at Orangebeard"
+                title="Lead Front-End Developer at Orangebeard"
               />
               <Timeline.Item
                 type={Timeline.Item.TYPE.WORK}
@@ -227,7 +227,7 @@ const IndexPage = () => (
                 type={Timeline.Item.TYPE.WORK}
                 startYear="Feb 2020"
                 endYear="Jan 2021"
-                title="Full-Stack Developer at Praegus"
+                title="Lead Full-Stack Developer at Praegus"
               />
               <Timeline.Item
                 type={Timeline.Item.TYPE.WORK}
