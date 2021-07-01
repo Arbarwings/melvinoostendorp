@@ -6,4 +6,11 @@
   background-color: $secondary;
   color: $footer-text-color;
   padding: 40px 10px;
+
+  a {
+    color: $footer-text-color;
+    &:hover {
+      color: $white;
+    }
+  }
 }

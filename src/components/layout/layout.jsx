@@ -57,7 +57,10 @@ const Layout = ({ children }) => {
       </div>
       <main>{children}</main>
       <Footer className="has-text-centered">
-        © {new Date().getFullYear()} {companyName} | Designed and coded with ❤️ by {author}
+        © {new Date().getFullYear()} {companyName} | Designed and coded with ❤️ by {author} |{' '}
+        <a href="/privacy_policy.pdf" target="_blank" rel="noopener">
+          Privacy Policy
+        </a>
       </Footer>
       <ScrollToTop />
     </>
