@@ -110,7 +110,7 @@ const IndexPage = () => (
         </Columns>
         <Columns className="mt-1">
           <Columns.Column centered>
-            <Fact icon={mdiLaptop} total={51} description="Projects completed" />
+            <Fact icon={mdiLaptop} total={56} description="Projects completed" />
           </Columns.Column>
           <Columns.Column centered>
             <Fact
@@ -120,7 +120,7 @@ const IndexPage = () => (
             />
           </Columns.Column>
           <Columns.Column centered>
-            <Fact icon={mdiMusicNote} total={3741} description="Hours listened to music" />
+            <Fact icon={mdiMusicNote} total={4379} description="Hours listened to music" />
           </Columns.Column>
           <Columns.Column centered>
             <Fact icon={mdiEarth} total={7} description="Countries visited" />
@@ -170,6 +170,15 @@ const IndexPage = () => (
         <Columns>
           <Columns.Column>
             <Timeline>
+            <Timeline.Item
+                type={Timeline.Item.TYPE.EDUCATION}
+                startYear={2021}
+                endYear={2022}
+                title="Korean"
+                secondTitle="Language Education"
+              >
+                Seoul National University
+              </Timeline.Item>
               <Timeline.Item
                 type={Timeline.Item.TYPE.EDUCATION}
                 startYear={2020}
