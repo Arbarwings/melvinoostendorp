@@ -5,7 +5,7 @@ import { ShowContext } from '../context';
 
 import './navbarMenu.scss';
 
-const NavbarMenu = ({ children, className, ...props }) => {
+function NavbarMenu({ children, className, ...props }) {
   return (
     <ShowContext.Consumer>
       {(active) => (
@@ -20,7 +20,7 @@ const NavbarMenu = ({ children, className, ...props }) => {
       )}
     </ShowContext.Consumer>
   );
-};
+}
 
 NavbarMenu.propTypes = {
   children: PropTypes.node,

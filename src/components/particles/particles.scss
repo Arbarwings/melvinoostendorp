@@ -1,9 +1,9 @@
-@import 'common/sass/_all';
+@import 'common/sass/all';
 
 .particles {
   height: 100%;
   left: 0;
-  position: absolute;
+  position: absolute !important;
   top: 0;
   width: 100%;
 }

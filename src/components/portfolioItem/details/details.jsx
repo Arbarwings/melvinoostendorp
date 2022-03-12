@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Icon from '@mdi/react';
 import { mdiDotsHorizontal } from '@mdi/js';
 
-const Details = ({ title, children, className, ...props }) => {
+function Details({ title, children, className, ...props }) {
   return (
     <div className={classNames('details', className)} {...props}>
       {title}
@@ -13,7 +13,7 @@ const Details = ({ title, children, className, ...props }) => {
       </span>
     </div>
   );
-};
+}
 
 Details.propTypes = {
   title: PropTypes.string.isRequired,

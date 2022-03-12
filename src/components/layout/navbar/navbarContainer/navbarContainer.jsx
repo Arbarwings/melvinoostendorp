@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const NavbarContainer = ({ children, className, position, ...props }) => {
+function NavbarContainer({ children, className, position, ...props }) {
   return (
     <div
       className={classNames(className, {
@@ -13,7 +13,7 @@ const NavbarContainer = ({ children, className, position, ...props }) => {
       {children}
     </div>
   );
-};
+}
 
 NavbarContainer.POSITION = {
   START: 'start',

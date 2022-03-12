@@ -6,7 +6,7 @@ import Title from './title';
 
 import './section.scss';
 
-const Section = ({ children, className, size, ...props }) => {
+function Section({ children, className, size, ...props }) {
   return (
     <section
       className={classNames('section', className, {
@@ -17,7 +17,7 @@ const Section = ({ children, className, size, ...props }) => {
       {children}
     </section>
   );
-};
+}
 
 Section.SIZES = {
   MEDIUM: 'medium',

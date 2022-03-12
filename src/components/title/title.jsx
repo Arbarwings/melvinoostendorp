@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import './title.scss';
 
-const Title = ({ children, className, size, subtitle, weight, spaced, ...props }) => {
+function Title({ children, className, size, subtitle, weight, spaced, ...props }) {
   return (
     <h1
       className={classNames(className, {
@@ -19,7 +19,7 @@ const Title = ({ children, className, size, subtitle, weight, spaced, ...props }
       {children}
     </h1>
   );
-};
+}
 
 Title.propTypes = {
   children: PropTypes.node,

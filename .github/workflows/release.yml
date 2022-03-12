@@ -12,11 +12,11 @@ jobs:
       releaseVersion: ${{ steps.exposeVersion.outputs.releaseVersion }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'
       - name: Cache node modules
         uses: actions/cache@v2
         with:
@@ -36,7 +36,7 @@ jobs:
       versionInfo: ${{ steps.readChangelogEntry.outputs.log_entry }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Configure git
         run: |
           git config --global user.email "info@arbarwings.nl"
@@ -48,7 +48,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'
       - name: Cache node modules
         uses: actions/cache@v2
         with:
@@ -61,7 +61,7 @@ jobs:
       - name: Create CHANGELOG.md
         run: npm run create-changelog
       - name: Upload changelog as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: changelog
           path: CHANGELOG.md
@@ -70,9 +70,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Download changelog for artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: changelog
       - name: Configure git
@@ -85,7 +85,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'
       - name: Cache node modules
         uses: actions/cache@v2
         with:
@@ -97,43 +97,31 @@ jobs:
         run: npm install
       - name: Run deploy
         run: npm run deploy
-      - name: Create Release
-        id: create-release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ needs.get-version.outputs.releaseVersion }}
-          release_name: ${{ needs.get-version.outputs.releaseVersion }}
-          body_path: CHANGELOG.md
-          draft: false
-          prerelease: false
       - name: Zip public folder
         run: cd public && zip -r ../website.zip . && cd ../
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
+      - name: Create Release
+        id: create-release
+        uses: softprops/action-gh-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create-release.outputs.upload_url }}
-          asset_path: ./website.zip
-          asset_name: website.zip
-          asset_content_type: application/zip
+          body_path: CHANGELOG.md
+          files: website.zip
+          tag_name: v${{ needs.get-version.outputs.releaseVersion }}
   update-version:
     needs: [get-version, prepare-release, create-release]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Configure git
         run: |
           git config --global user.email "info@arbarwings.nl"
           git config --global user.name "Melvin Oostendorp"
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: 12.x
+          node-version: '16'
       - name: Cache node modules
         uses: actions/cache@v2
         with:

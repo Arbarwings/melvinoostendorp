@@ -11,7 +11,7 @@ import NavbarItem from './navbarItem';
 
 import './navbar.scss';
 
-const Navbar = ({ children, className, fixed, active, ...props }) => {
+function Navbar({ children, className, fixed, active, ...props }) {
   return (
     <ShowContext.Provider value={active}>
       <nav
@@ -25,7 +25,7 @@ const Navbar = ({ children, className, fixed, active, ...props }) => {
       </nav>
     </ShowContext.Provider>
   );
-};
+}
 
 Navbar.FIXED = {
   TOP: 'top',

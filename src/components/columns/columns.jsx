@@ -10,7 +10,7 @@ import './columns.scss';
 
 const breakpoints = [null].concat(Object.keys(BREAKPOINTS).map((key) => BREAKPOINTS[key]));
 
-const Columns = ({
+function Columns({
   children,
   className,
   breakpoint,
@@ -19,7 +19,7 @@ const Columns = ({
   centered,
   vCentered,
   ...props
-}) => {
+}) {
   return (
     <div
       className={classNames('columns', className, {
@@ -34,7 +34,7 @@ const Columns = ({
       {children}
     </div>
   );
-};
+}
 
 Columns.Column = Column;
 Columns.BREAKPOINTS = BREAKPOINTS;

@@ -12,7 +12,7 @@ import {
   companyName,
 } from 'data/config';
 
-const SEO = ({ title = defaultTitle, description = defaultDescription, location = '' }) => {
+function SEO({ title = defaultTitle, description = defaultDescription, location = '' }) {
   const structuredDataOrganization = `{ 
           "@context": "http://schema.org",
           "@type": "Organization",
@@ -46,7 +46,7 @@ const SEO = ({ title = defaultTitle, description = defaultDescription, location 
       <html lang="en" dir="ltr" />
     </Helmet>
   );
-};
+}
 
 SEO.propTypes = {
   title: PropTypes.string,

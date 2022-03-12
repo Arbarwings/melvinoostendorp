@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 
 import './navbarItem.scss';
 
-const NavbarItem = ({ children, className, to, offset, ...props }) => {
+function NavbarItem({ children, className, to, offset, ...props }) {
   return (
     <Link
       className={classNames('navbar-item', className)}
@@ -20,7 +20,7 @@ const NavbarItem = ({ children, className, to, offset, ...props }) => {
       {children}
     </Link>
   );
-};
+}
 
 NavbarItem.propTypes = {
   children: PropTypes.node,

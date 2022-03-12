@@ -18,7 +18,7 @@ const sizes = [null, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].concat(
   Object.keys(SIZES).map((key) => SIZES[key]),
 );
 
-const Column = ({
+function Column({
   children,
   className,
   size,
@@ -32,7 +32,7 @@ const Column = ({
   touch,
   centered,
   ...props
-}) => {
+}) {
   return (
     <div
       className={classNames('column', className, {
@@ -64,7 +64,7 @@ const Column = ({
       {children}
     </div>
   );
-};
+}
 
 Column.SIZES = SIZES;
 

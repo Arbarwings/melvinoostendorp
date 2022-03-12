@@ -6,14 +6,14 @@ import Item from './item';
 
 import './timeline.scss';
 
-const Timeline = ({ children, className, ...props }) => {
+function Timeline({ children, className, ...props }) {
   return (
     <FlexCard className={classNames('timeline', className)} {...props}>
       {children}
       <span className={classNames('timeline-line')} />
     </FlexCard>
   );
-};
+}
 
 Timeline.Item = Item;
 

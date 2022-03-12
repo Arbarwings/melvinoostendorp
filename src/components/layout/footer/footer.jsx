@@ -4,13 +4,13 @@ import classNames from 'classnames';
 
 import './footer.scss';
 
-const Footer = ({ children, className, ...props }) => {
+function Footer({ children, className, ...props }) {
   return (
     <footer className={classNames('footer', className)} {...props}>
       {children}
     </footer>
   );
-};
+}
 
 Footer.propTypes = {
   children: PropTypes.node,

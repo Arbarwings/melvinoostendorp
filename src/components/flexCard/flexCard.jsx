@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import './flexCard.scss';
 
-const FlexCard = ({ children, className, triangle, color, ...props }) => {
+function FlexCard({ children, className, triangle, color, ...props }) {
   return (
     <div
       className={classNames('flex-card', className, {
@@ -16,7 +16,7 @@ const FlexCard = ({ children, className, triangle, color, ...props }) => {
       {children}
     </div>
   );
-};
+}
 
 FlexCard.TRIANGLE = {
   LEFT: 'left',

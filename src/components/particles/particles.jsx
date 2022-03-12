@@ -4,18 +4,22 @@ import ParticlesJS from 'react-tsparticles';
 
 import './particles.scss';
 
-const Particles = () => {
+function Particles() {
   return (
     <ParticlesJS
-      className={classNames('particles')}
-      params={{
+      id="tsparticles"
+      canvasClassName={classNames('particles')}
+      options={{
+        fullScreen: {
+          enable: false
+        },
         particles: {
           number: {
             value: 30,
             max: -1,
             density: {
               enable: false,
-              value_area: 1200,
+              area: 1200,
             },
           },
           color: {
@@ -44,7 +48,7 @@ const Particles = () => {
               sync: false,
             },
           },
-          line_linked: {
+          links: {
             enable: false,
           },
           move: {
@@ -53,7 +57,7 @@ const Particles = () => {
             direction: 'none',
             random: false,
             straight: false,
-            out_mode: 'bounce',
+            outMode: 'bounce',
             bounce: true,
             attract: {
               enable: false,
@@ -62,11 +66,11 @@ const Particles = () => {
             },
           },
         },
-        retina_detect: true,
-        fps_limit: 60,
+        detectRetina: true,
+        fpsLimit: 120,
       }}
     />
   );
-};
+}
 
 export default Particles;

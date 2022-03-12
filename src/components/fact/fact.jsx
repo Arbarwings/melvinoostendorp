@@ -5,7 +5,7 @@ import Icon from '@mdi/react';
 
 import './fact.scss';
 
-const Fact = ({ className, icon, total, description, ...props }) => {
+function Fact({ className, icon, total, description, ...props }) {
   return (
     <div className={classNames('fact-item', className)} {...props}>
       <Icon path={icon} title={description} size={1.7} />
@@ -15,7 +15,7 @@ const Fact = ({ className, icon, total, description, ...props }) => {
       </div>
     </div>
   );
-};
+}
 
 Fact.propTypes = {
   className: PropTypes.string,

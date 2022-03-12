@@ -6,7 +6,7 @@ import { mdiArrowUpThick } from '@mdi/js';
 
 import './scrollToTop.scss';
 
-const ScrollToTop = ({ className, ...props }) => {
+function ScrollToTop({ className, ...props }) {
   const [showScroll, setShowScroll] = useState(false);
 
   const checkScrollTop = () => {
@@ -36,7 +36,7 @@ const ScrollToTop = ({ className, ...props }) => {
       <Icon path={mdiArrowUpThick} title="Scroll to top" size={1} />
     </div>
   );
-};
+}
 
 ScrollToTop.propTypes = {
   className: PropTypes.string,

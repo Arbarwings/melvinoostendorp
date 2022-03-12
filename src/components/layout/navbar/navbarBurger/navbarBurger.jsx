@@ -5,7 +5,7 @@ import { ShowContext } from '../context';
 
 import './navbarBurger.scss';
 
-const NavbarBurger = ({ children, className, onClick, ...props }) => {
+function NavbarBurger({ children, className, onClick, ...props }) {
   return (
     <ShowContext.Consumer>
       {(active) => (
@@ -26,7 +26,7 @@ const NavbarBurger = ({ children, className, onClick, ...props }) => {
       )}
     </ShowContext.Consumer>
   );
-};
+}
 
 NavbarBurger.propTypes = {
   children: PropTypes.node,

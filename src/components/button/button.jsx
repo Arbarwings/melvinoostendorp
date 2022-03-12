@@ -7,7 +7,7 @@ import './button.scss';
 
 const colors = [null, ''].concat(Object.keys(COLORS).map((key) => COLORS[key]));
 
-const Button = ({
+function Button({
   children,
   className,
   color,
@@ -25,12 +25,13 @@ const Button = ({
   onClick,
   text,
   ...props
-}) => {
+}) {
   return (
     <button
       onClick={onClick}
       tabIndex={disabled ? -1 : 0}
       disabled={disabled}
+      type="button"
       className={classNames(className, {
         [`is-${color}`]: color,
         [`is-${size}`]: size,
@@ -51,7 +52,7 @@ const Button = ({
       {children}
     </button>
   );
-};
+}
 
 Button.COLORS = COLORS;
 

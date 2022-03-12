@@ -9,7 +9,7 @@ import ScrollToTop from './scrollToTop';
 
 import './layout.scss';
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
   const node = useRef();
   const [isToggled, setToggled] = useState(false);
   const toggleChange = () => setToggled(!isToggled);
@@ -65,7 +65,7 @@ const Layout = ({ children }) => {
       <ScrollToTop />
     </>
   );
-};
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

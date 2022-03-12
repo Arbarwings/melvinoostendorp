@@ -4,13 +4,13 @@ import classNames from 'classnames';
 
 import './title.scss';
 
-const Title = ({ children, className, ...props }) => {
+function Title({ children, className, ...props }) {
   return (
     <h2 className={classNames('section-title', className)} {...props}>
       {children}
     </h2>
   );
-};
+}
 
 Title.propTypes = {
   children: PropTypes.node,

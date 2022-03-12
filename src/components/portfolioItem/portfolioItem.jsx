@@ -6,14 +6,14 @@ import Details from './details';
 
 import './portfolioItem.scss';
 
-const PortfolioItem = ({ children, className, ...props }) => {
+function PortfolioItem({ children, className, ...props }) {
   return (
     <FlexCard className={classNames('portfolio-item', className)} {...props}>
       {children}
       <div className={classNames('mask')} />
     </FlexCard>
   );
-};
+}
 
 PortfolioItem.Details = Details;
 

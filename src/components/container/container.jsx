@@ -7,7 +7,7 @@ import './container.scss';
 
 const breakpoints = [null].concat(Object.keys(BREAKPOINTS).map((key) => BREAKPOINTS[key]));
 
-const Container = ({ children, fluid, breakpoint, className, ...props }) => {
+function Container({ children, fluid, breakpoint, className, ...props }) {
   return (
     <div
       className={classNames('container', className, {
@@ -19,7 +19,7 @@ const Container = ({ children, fluid, breakpoint, className, ...props }) => {
       {children}
     </div>
   );
-};
+}
 
 Container.BREAKPOINTS = BREAKPOINTS;
 

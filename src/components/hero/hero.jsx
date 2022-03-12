@@ -11,7 +11,7 @@ import './hero.scss';
 
 const colors = [null].concat(Object.keys(COLORS).map((key) => COLORS[key]));
 
-const Hero = ({ children, className, color, size, ...props }) => {
+function Hero({ children, className, color, size, ...props }) {
   return (
     <section
       className={classNames('hero', className, {
@@ -23,7 +23,7 @@ const Hero = ({ children, className, color, size, ...props }) => {
       {children}
     </section>
   );
-};
+}
 
 Hero.COLORS = COLORS;
 Hero.SIZES = {

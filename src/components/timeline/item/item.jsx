@@ -7,7 +7,7 @@ import { mdiSchoolOutline, mdiBriefcaseOutline } from '@mdi/js';
 
 import './item.scss';
 
-const Item = ({ children, className, startYear, endYear, title, secondTitle, type, ...props }) => {
+function Item({ children, className, startYear, endYear, title, secondTitle, type, ...props }) {
   return (
     <div className={classNames('timeline-item', className, `timeline-${type}`)} {...props}>
       <div className={classNames('timeline-content')}>
@@ -27,7 +27,7 @@ const Item = ({ children, className, startYear, endYear, title, secondTitle, typ
       </div>
     </div>
   );
-};
+}
 
 Item.TYPE = {
   EDUCATION: 'education',
